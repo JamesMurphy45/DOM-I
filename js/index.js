@@ -40,3 +40,61 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+//Nav Bar
+const links = document.querySelectorAll('nav a');
+let count = 1
+links.forEach(element => {element.textContent = siteContent.nav[`nav-item-${count}`];
+  count++;
+});
+// NavLinks change to green
+links.forEach(element => {element.style.color = 'green';
+  count++;
+});
+
+// DOM IS AWESOME
+const awesome = document.querySelector("h1");
+awesome.innerHTML = "DOM <br> IS <br> AWESOME"
+
+//Button
+const getStartedButton = document.querySelector('button');
+getStartedButton.textContent = siteContent['cta']['button'];
+
+
+// CTA img
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+//allH4
+const allH4 = document.querySelectorAll("h4");
+allH4[0].textContent=siteContent['main-content']["features-h4"];
+allH4[1].textContent=siteContent['main-content']["about-h4"];
+allH4[2].textContent=siteContent['main-content']["services-h4"];
+allH4[3].textContent=siteContent['main-content']["product-h4"];
+allH4[4].textContent=siteContent['main-content']["vision-h4"];
+allH4[5].textContent=siteContent['contact']["contact-h4"];
+
+//allP
+const allP = document.querySelectorAll("p");
+allP[0].textContent=siteContent['main-content']["features-content"];
+allP[1].textContent=siteContent['main-content']["about-content"];
+allP[2].textContent=siteContent['main-content']["services-content"];
+allP[3].textContent=siteContent['main-content']["product-content"];
+allP[4].textContent=siteContent['main-content']["vision-content"];
+allP[5].textContent=siteContent['contact']["address"];
+allP[6].textContent=siteContent['contact']["phone"];
+allP[7].textContent=siteContent['contact']["email"];
+allP[8].textContent=siteContent['footer']["copyright"];
+
+
+//mid img
+const middleImg = document.querySelector('#middle-img');
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+
+
+
+
+
+
+
